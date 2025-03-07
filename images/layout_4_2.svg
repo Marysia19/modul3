@@ -1,0 +1,24 @@
+<svg width="382" height="266" viewBox="0 0 382 266" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_68_284)">
+<rect width="382" height="266" fill="white"/>
+<rect x="182.5" y="170.5" width="198" height="94" fill="url(#pattern0_68_284)" stroke="black" stroke-width="3"/>
+<rect x="95.5" y="232.5" width="32" height="94" transform="rotate(90 95.5 232.5)" fill="url(#pattern1_68_284)" stroke="black" stroke-width="3"/>
+<path d="M71.5 206V231.5H24.5V206C24.5 193.021 35.0213 182.5 48 182.5C60.9787 182.5 71.5 193.021 71.5 206Z" stroke="black" stroke-width="3"/>
+<rect x="324.5" y="1.5" width="56" height="118" stroke="black" stroke-width="3"/>
+<rect x="10.2217" y="19" width="139.223" height="5.44113" transform="rotate(50.8916 10.2217 19)" fill="black"/>
+<rect x="10" y="19" width="139" height="9" transform="rotate(90 10 19)" fill="black"/>
+</g>
+<rect x="2" y="2" width="378" height="262" stroke="black" stroke-width="4"/>
+<defs>
+<pattern id="pattern0_68_284" patternContentUnits="objectBoundingBox" width="0.0597015" height="0.123711">
+<use xlink:href="#image0_68_284" transform="scale(0.00497512 0.0103093)"/>
+</pattern>
+<pattern id="pattern1_68_284" patternContentUnits="objectBoundingBox" width="0.342857" height="0.123711">
+<use xlink:href="#image0_68_284" transform="scale(0.0285714 0.0103093)"/>
+</pattern>
+<clipPath id="clip0_68_284">
+<rect width="382" height="266" fill="white"/>
+</clipPath>
+<image id="image0_68_284" width="12" height="12" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtSURBVHgB7czBDQAABENRYnBGsxm1gd4cNPm3l5rs5iiRbnGheHwHC4nnnMLVyXcXLmXXjQMAAAAASUVORK5CYII="/>
+</defs>
+</svg>

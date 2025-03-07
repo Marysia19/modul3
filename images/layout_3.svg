@@ -1,0 +1,12 @@
+<svg width="207" height="157" viewBox="0 0 207 157" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="2" y="2" width="203" height="153" fill="white"/>
+<rect x="2" y="2" width="203" height="153" stroke="black" stroke-width="4"/>
+<rect x="2.5" y="113.5" width="42" height="42" fill="url(#pattern0_68_228)" stroke="black" stroke-width="3"/>
+<rect x="64" y="146" width="140" height="8" fill="black"/>
+<defs>
+<pattern id="pattern0_68_228" patternContentUnits="objectBoundingBox" width="0.266667" height="0.266667">
+<use xlink:href="#image0_68_228" transform="scale(0.0222222)"/>
+</pattern>
+<image id="image0_68_228" width="12" height="12" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtSURBVHgB7czBDQAABENRYnBGsxm1gd4cNPm3l5rs5iiRbnGheHwHC4nnnMLVyXcXLmXXjQMAAAAASUVORK5CYII="/>
+</defs>
+</svg>

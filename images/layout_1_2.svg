@@ -1,0 +1,31 @@
+<svg width="484" height="688" viewBox="0 0 484 688" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="2" y="2" width="480" height="684" fill="white"/>
+<rect x="2" y="2" width="480" height="684" stroke="black" stroke-width="4"/>
+<rect x="472" y="653" width="160" height="12" transform="rotate(-90 472 653)" fill="black"/>
+<rect x="472.159" y="653.16" width="160.985" height="6.298" transform="rotate(-129.108 472.159 653.16)" fill="black"/>
+<rect x="340.5" y="226.5" width="99" height="161" transform="rotate(180 340.5 226.5)" stroke="black" stroke-width="3"/>
+<rect x="75.5" y="673.5" width="34" height="57" transform="rotate(-90 75.5 673.5)" fill="url(#pattern0_66_71)" stroke="black" stroke-width="3"/>
+<rect x="151.5" y="673.5" width="34" height="57" transform="rotate(-90 151.5 673.5)" fill="url(#pattern1_66_71)" stroke="black" stroke-width="3"/>
+<rect x="61.5" y="686.5" width="222" height="161" transform="rotate(-90 61.5 686.5)" stroke="black" stroke-width="3"/>
+<rect x="482.5" y="250.5" width="108" height="232" transform="rotate(180 482.5 250.5)" fill="url(#pattern2_66_71)" stroke="black" stroke-width="3"/>
+<rect x="482.5" y="38.5" width="108" height="20" transform="rotate(180 482.5 38.5)" fill="white" stroke="black" stroke-width="3"/>
+<rect x="482.5" y="250.5" width="108" height="21" transform="rotate(180 482.5 250.5)" fill="white" stroke="black" stroke-width="3"/>
+<rect x="60.5" y="284.5" width="59" height="61" transform="rotate(180 60.5 284.5)" stroke="black" stroke-width="3"/>
+<rect x="42.5" y="223.5" width="41" height="144" transform="rotate(180 42.5 223.5)" fill="url(#pattern3_66_71)" stroke="black" stroke-width="3"/>
+<rect x="60.5" y="79.5" width="59" height="61" transform="rotate(180 60.5 79.5)" stroke="black" stroke-width="3"/>
+<defs>
+<pattern id="pattern0_66_71" patternContentUnits="objectBoundingBox" width="0.324324" height="0.2">
+<use xlink:href="#image0_66_71" transform="scale(0.027027 0.0166667)"/>
+</pattern>
+<pattern id="pattern1_66_71" patternContentUnits="objectBoundingBox" width="0.324324" height="0.2">
+<use xlink:href="#image0_66_71" transform="scale(0.027027 0.0166667)"/>
+</pattern>
+<pattern id="pattern2_66_71" patternContentUnits="objectBoundingBox" width="0.108108" height="0.0510638">
+<use xlink:href="#image0_66_71" transform="scale(0.00900901 0.00425532)"/>
+</pattern>
+<pattern id="pattern3_66_71" patternContentUnits="objectBoundingBox" width="0.272727" height="0.0816327">
+<use xlink:href="#image0_66_71" transform="scale(0.0227273 0.00680272)"/>
+</pattern>
+<image id="image0_66_71" width="12" height="12" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtSURBVHgB7czBDQAABENRYnBGsxm1gd4cNPm3l5rs5iiRbnGheHwHC4nnnMLVyXcXLmXXjQMAAAAASUVORK5CYII="/>
+</defs>
+</svg>

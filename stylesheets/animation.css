@@ -1,0 +1,45 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.close-button:hover, .close:hover {
+  color: #A3561F;
+  transition: 0.2s ease-out;
+}
+#popupMenu, #popuprules, #popuplayout {
+    animation: fadeIn 0.5s ease;
+}
+.materials img:hover {
+    animation: fadeIn 0.4s ease-in-out;
+}
+.question-mark, .question-mark2, .question-mark3 {
+  transition: transform 0.3s;
+}
+
+.question-mark:hover, .question-mark2:hover, .question-mark3:hover {
+  transform: scale(1.1);
+}
+.button-section:hover{
+  color: #A3561F;
+  transition: 0.3s ease;
+}
+
+#vulkan1 {transform: translate(-40%, 20%);}
+#vulkan2 {transform: translate(-20%, 20%);}
+#vulkan3 {transform: translate(-30%, 40%);}
+#vulkan4 {transform: translate(25%, 20%);}
+
+#mountain1 {transform: translate(190%, 20%);}
+#mountain2 {transform: translate(160%, 60%);}
+#mountain3 {transform: translate(175%, 40%);}
+#mountain4 {transform: translate(200%, 10%);}
+
+#cave1 {transform: translate(40%, -45%);}
+#cave2 { transform: translate(60%, -35%); }
+#cave3 { transform: translate(-10%, -25%); }
+#cave4 { transform: translate(75%, -15%); }
+

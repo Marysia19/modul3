@@ -1,0 +1,22 @@
+<svg width="383" height="441" viewBox="0 0 383 441" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="2" y="2" width="379" height="437" fill="white" stroke="black" stroke-width="4"/>
+<rect x="12" y="202" width="157" height="12" transform="rotate(90 12 202)" fill="black"/>
+<rect x="12.6064" y="201.905" width="155.68" height="6.08767" transform="rotate(50.8916 12.6064 201.905)" fill="black"/>
+<rect x="381.5" y="1.5" width="71" height="380" transform="rotate(90 381.5 1.5)" stroke="black" stroke-width="3"/>
+<rect x="33.5" y="176.5" width="32" height="104" transform="rotate(180 33.5 176.5)" stroke="black" stroke-width="3"/>
+<rect x="381.5" y="1.5" width="71" height="82" transform="rotate(90 381.5 1.5)" fill="url(#pattern0_68_142)" stroke="black" stroke-width="3"/>
+<rect x="381.5" y="341.5" width="145" height="82" transform="rotate(180 381.5 341.5)" fill="url(#pattern1_68_142)" stroke="black" stroke-width="3"/>
+<rect x="369.5" y="259.5" width="45" height="7" transform="rotate(180 369.5 259.5)" stroke="black" stroke-width="3"/>
+<rect x="295.5" y="259.5" width="45" height="7" transform="rotate(180 295.5 259.5)" stroke="black" stroke-width="3"/>
+<rect x="369.5" y="348.5" width="45" height="7" transform="rotate(180 369.5 348.5)" stroke="black" stroke-width="3"/>
+<rect x="295.5" y="348.5" width="45" height="7" transform="rotate(180 295.5 348.5)" stroke="black" stroke-width="3"/>
+<defs>
+<pattern id="pattern0_68_142" patternContentUnits="objectBoundingBox" width="0.162162" height="0.141176">
+<use xlink:href="#image0_68_142" transform="scale(0.0135135 0.0117647)"/>
+</pattern>
+<pattern id="pattern1_68_142" patternContentUnits="objectBoundingBox" width="0.0810811" height="0.141176">
+<use xlink:href="#image0_68_142" transform="scale(0.00675676 0.0117647)"/>
+</pattern>
+<image id="image0_68_142" width="12" height="12" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtSURBVHgB7czBDQAABENRYnBGsxm1gd4cNPm3l5rs5iiRbnGheHwHC4nnnMLVyXcXLmXXjQMAAAAASUVORK5CYII="/>
+</defs>
+</svg>

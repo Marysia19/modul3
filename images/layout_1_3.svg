@@ -1,0 +1,36 @@
+<svg width="688" height="344" viewBox="0 0 688 344" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g clip-path="url(#clip0_1_64)">
+<rect x="688" width="344" height="688" transform="rotate(90 688 0)" fill="white"/>
+<rect x="389" y="332" width="148" height="12" fill="black"/>
+<rect x="389" y="332.357" width="148" height="5.79" transform="rotate(-39.1084 389 332.357)" fill="black"/>
+<rect x="61.5" y="200.5" width="99" height="161" transform="rotate(-90 61.5 200.5)" stroke="black" stroke-width="3"/>
+<rect x="673.5" y="148.5" width="34" height="57" transform="rotate(180 673.5 148.5)" fill="url(#pattern0_1_64)" stroke="black" stroke-width="3"/>
+<rect x="673.5" y="72.5" width="34" height="57" transform="rotate(180 673.5 72.5)" fill="url(#pattern1_1_64)" stroke="black" stroke-width="3"/>
+<rect x="686.5" y="162.5" width="222" height="161" transform="rotate(180 686.5 162.5)" stroke="black" stroke-width="3"/>
+<rect x="37.5" y="342.5" width="108" height="232" transform="rotate(-90 37.5 342.5)" fill="url(#pattern2_1_64)" stroke="black" stroke-width="3"/>
+<rect x="249.5" y="342.5" width="108" height="20" transform="rotate(-90 249.5 342.5)" fill="white" stroke="black" stroke-width="3"/>
+<rect x="37.5" y="342.5" width="108" height="21" transform="rotate(-90 37.5 342.5)" fill="white" stroke="black" stroke-width="3"/>
+<rect x="20.5" y="60.5" width="59" height="61" transform="rotate(-90 20.5 60.5)" stroke="black" stroke-width="3"/>
+<rect x="81.5" y="42.5" width="41" height="144" transform="rotate(-90 81.5 42.5)" fill="url(#pattern3_1_64)" stroke="black" stroke-width="3"/>
+<rect x="225.5" y="60.5" width="59" height="61" transform="rotate(-90 225.5 60.5)" stroke="black" stroke-width="3"/>
+</g>
+<rect x="686" y="2" width="340" height="684" transform="rotate(90 686 2)" stroke="black" stroke-width="4"/>
+<defs>
+<pattern id="pattern0_1_64" patternContentUnits="objectBoundingBox" width="0.324324" height="0.2">
+<use xlink:href="#image0_1_64" transform="scale(0.027027 0.0166667)"/>
+</pattern>
+<pattern id="pattern1_1_64" patternContentUnits="objectBoundingBox" width="0.324324" height="0.2">
+<use xlink:href="#image0_1_64" transform="scale(0.027027 0.0166667)"/>
+</pattern>
+<pattern id="pattern2_1_64" patternContentUnits="objectBoundingBox" width="0.108108" height="0.0510638">
+<use xlink:href="#image0_1_64" transform="scale(0.00900901 0.00425532)"/>
+</pattern>
+<pattern id="pattern3_1_64" patternContentUnits="objectBoundingBox" width="0.272727" height="0.0816327">
+<use xlink:href="#image0_1_64" transform="scale(0.0227273 0.00680272)"/>
+</pattern>
+<clipPath id="clip0_1_64">
+<rect x="688" width="344" height="688" transform="rotate(90 688 0)" fill="white"/>
+</clipPath>
+<image id="image0_1_64" width="12" height="12" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtSURBVHgB7czBDQAABENRYnBGsxm1gd4cNPm3l5rs5iiRbnGheHwHC4nnnMLVyXcXLmXXjQMAAAAASUVORK5CYII="/>
+</defs>
+</svg>

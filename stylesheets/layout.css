@@ -1,4 +1,439 @@
 body {
-  height: 100vh;
+  height: 300vh;
   background-color: #ffffff;
+  font-family: "HelveticaLight";
+}
+::selection {
+  background: #a3561f93;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #A3561F;
+  background-clip: padding-box;
+}
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 1vw;
+  right: 1vw;
+  z-index: 100;
+  color: #A3561F;
+  cursor: pointer;
+  width: 2.5vw;
+  height: 2.5vw;
+  text-align: center;
+  border: 0.2vw solid black;
+  font-size: 2vw;
+  border-radius: 1vw;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#scrollToTopBtn:hover{
+  color: rgb(105, 105, 105);
+  transition: 0.3s ease-out;
+}
+/* Стили для секции 1 с раширением картинки */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+}
+.header h3{
+  font-size: 3vw;
+  color: #A3561F;
+  user-select: none;
+}
+.container{
+  height: 100vh;
+}
+.about{
+  margin: 1vw 0vw 0vw 4vw;
+}
+.about h2{
+  font-size: 3.5vw
+}
+.image-container {
+  position: absolute;
+  top: 30vw;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+.mobile-image {
+  display: none;
+}
+.image-wrapper {
+  text-align: left;
+}
+.image-wrapper img {
+  width: 40vw;
+  border: 0.3vw solid black;
+  padding: 1vw;
+  opacity: 0.7;
+  cursor: move;
+}
+.popup-menu{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  display: none; 
+  font-size: 2vw;
+}
+.close-button, .close {
+  position: absolute;
+  top: 0.5vw;
+  right: 0.7vw;
+  font-size: 2vw;
+  padding: 0vw 0.6vw 0.5vw 0.6vw;
+  cursor: pointer;
+  color: #000;
+  border: 0.2vw solid black;
+  border-radius: 4vw;
+}
+.popup-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  background-color: white;
+  border: 0.3vw solid black;
+  padding: 2.6vw;
+}
+.content h2, .layout-content h2{
+  font-family: 'Helvetica';
+}
+.content p, .layout-content p{
+  font-size: 1.5vw;
+  line-height: 1.2;
+}
+.button-section {
+  margin-top: 2vw;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 1vw;
+  border: 0.3vw solid black;
+  cursor: pointer;
+}
+.button-section a{
+  text-decoration: none;
+  color: #000;
+}
+.description {
+  margin-top: 1vw; 
+  font-size: 1.3vw;
+}
+.about__right{
+  margin-top: 23vw;
+  margin-right: 4vw;
+  position: absolute;
+  text-align: right;
+  right: 0;
+}
+.about__right h2{
+  font-size: 3.5vw;
+}
+.question-mark{
+  width: 9vw;
+  cursor: pointer;
+  display: none;
+}
+.popup {
+  display: none; 
+}
+/* Стили для секции 2 с выбором материала */
+.section_2{
+  margin-top: 20vw;
+}
+.choice-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw 0vw 3vw 4vw;
+}
+.choice-title h2{
+ color: #A3561F;
+ font-size: 4.5vw;
+}
+.material{
+  margin-right: 26vw;
+}
+.materials {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior-x: contain;
+}
+.materials img {
+  width: 21vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  flex: 0 0 auto;
+  border: 0.3vw solid black;
+  cursor: pointer;
+  position: relative;
+}
+.question-mark2{
+  width: 5vw;
+  cursor: pointer;
+  margin-left: 3.5vw;
+  margin-top: 1vw;
+  position: absolute;
+}
+.popup2 {
+  display: none; 
+  position: absolute;
+  transform: translate(30%, -80%);
+  margin: 5vw 0vw 10vw 0vw;
+  background-color: white;
+  border: 0.3vw solid black;
+  padding: 0.5vw;
+  z-index: 10;
+  width: 30vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+.save-choice {
+  display: none;
+  font-size: 2.5vw;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3vw; 
+  background-color: white;
+  padding: 1vw;
+  border: 0.3vw solid black;
+  width: 42vw;
+  cursor: pointer;
+}
+/* Стили для секции 3 с кроссвордом */
+.section_3{
+  position: relative;
+  margin-top: 20vw;
+}
+.crossword-title{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 17vw;
+  margin-bottom: 1vw;
+}
+.crossword-title h1{
+  margin: 0;
+  font-size: 3vw;
+  color: #A3561F;
+}
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(8, 8vw);
+  grid-template-rows: repeat(5, 8vw);
+  position: relative;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  outline: 0.3vw solid black;
+  font-size: 5vw;
+  cursor: pointer;
+  user-select: none;
+}
+.vulcan-image,
+.mountain-image,
+.cave-image {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  opacity: 0;
+  z-index: -100;
+}
+.vulcan-image.visible,
+.mountain-image.visible,
+.cave-image.visible {
+  opacity: 1;
+  z-index: 100;
+}
+.vulcan-image.visible img,
+.mountain-image img,
+.cave-image img {
+  animation: crossword-animation 8s infinite;
+}
+.vulcan-image img,
+.mountain-image img,
+.cave-image img
+{
+  width: 15vw;
+  position: absolute;
+}
+#next-button {
+  font-size: 2.5vw;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3vw; 
+  background-color: white;
+  padding: 1vw;
+  border: 0.3vw solid black;
+  width: 42vw;
+  cursor: pointer;
+}
+#next-button.hidden {
+  display: none;
+}
+.popuprules {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  font-size: 2vw;
+}
+.popuprules.visible {
+  display: block;
+}
+/* Стили для секции 4 с планировками комнат */
+.section_4{
+  margin-top: 20vw;
+}
+.layout-title{
+  display: flex;
+  justify-content: space-around;
+  font-size: 5vw;
+  margin-bottom: 4vw;
+}
+.layout__title{
+  display: flex;
+  justify-content: center;
+}
+.question-mark3{
+  margin: 3vw 4vw 1vw 1vw;
+}
+.popup3 {
+  display: none; 
+  position: absolute;
+  transform: translate(20%, -240%);
+  margin: 5vw 0vw 10vw 0vw;
+  background-color: white;
+  border: 0.3vw solid black;
+  padding: 0.5vw;
+  z-index: 10;
+  width: 30vw;
+  font-size: 1.5vw;
+  text-align: center;
+}
+.layout{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.layout-bg{
+  background-image: url('../images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.layout-container__1, .layout-container__2{
+  position: relative;
+}
+.layout-container__1 img, .layout-container__2 img{
+  position: absolute;
+  cursor: pointer;
+  max-width: 28vw;
+}
+.image-1 {
+  bottom: 0;
+  right: 0;
+  transform: translate(-1vw, 2vw);
+  max-height: 26vw;
+}
+.image-2 {
+  bottom: 0;
+  left: 0;
+  transform: translate(3vw, -3vw);
+  max-height: 16vw;
+}
+.image-3 {
+  top: 0;
+  right: 0;
+  transform: translate(-2vw, 4vw);
+  max-height: 8vw;
+}
+.image-4 {
+  top: 0;
+  left: 0;
+  transform: translate(1vw, 2vw);
+  max-height: 15vw;
+  width: 17vw;
+}
+.save-layout {
+  font-size: 2.5vw;
+  color: black;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1vw;
+  border: 0.3vw solid black;
+  width: 42vw;
+  cursor: pointer;
+  position: relative;
+  transform: translateY(-4vw);
+}
+.popuplayout {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  font-size: 2vw;
+}
+.layout-content {
+  background-color: white;
+  border: 0.3vw solid black;
+  padding: 3vw;
+}
+.content p, .layout-content p{
+  font-size: 1.4vw;
+  line-height: 1.5;
+}
+.layout-content input{
+  height: 2.5vw;
+  width: 30vw;
+  margin: 1vw;
+  border: 0.2vw solid black;
+  font-size: 2vw;
+}
+.popuplayout.visible {
+  display: block;
+}
+.footer{
+  background-color: #000;
+  color: white;
+  font-size: 2.5vw;
+}
+.footer__content{
+  display: flex;
+  justify-content: space-between;
+}
+.footer_column__1 p{
+  padding: 2vw 2vw 2vw;
+}
+.footer_column__2 p{
+  padding: 2vw 2vw 0 0;
+}
+.footer_column__2 img{
+  width: 16vw;
+  padding: 2vw 0 0 0;
 }

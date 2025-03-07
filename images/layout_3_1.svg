@@ -1,0 +1,12 @@
+<svg width="208" height="198" viewBox="0 0 208 198" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="2" y="2" width="204" height="194" fill="white"/>
+<rect x="2" y="2" width="204" height="194" stroke="black" stroke-width="4"/>
+<rect x="159.5" y="1.5" width="47" height="48" fill="url(#pattern0_66_105)" stroke="black" stroke-width="3"/>
+<rect x="208" y="67" width="127" height="11" transform="rotate(90 208 67)" fill="black"/>
+<defs>
+<pattern id="pattern0_66_105" patternContentUnits="objectBoundingBox" width="0.24" height="0.235294">
+<use xlink:href="#image0_66_105" transform="scale(0.02 0.0196078)"/>
+</pattern>
+<image id="image0_66_105" width="12" height="12" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAtSURBVHgB7czBDQAABENRYnBGsxm1gd4cNPm3l5rs5iiRbnGheHwHC4nnnMLVyXcXLmXXjQMAAAAASUVORK5CYII="/>
+</defs>
+</svg>
