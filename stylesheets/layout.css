@@ -137,7 +137,8 @@ body {
   font-size: 3.5vw;
 }
 .question-mark{
-  width: 4vw;
+  width: 5vw;
+  display: block;
   cursor: pointer;
 }
 .popup {
@@ -153,7 +154,6 @@ body {
   text-align: center;
   display: none;
 }
-
 /* Стили для секции 2 с выбором материала */
 .section_2{
   padding-top: 8vw;

@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.resizable-image'); 
     const popupMenu = document.getElementById('popupMenu');
     const closeButton = popupMenu.querySelector('.close-button');
-    const aboutElements = document.querySelectorAll('.about, .description, .about__right');
+    const aboutElements = document.querySelectorAll('.about, .about__right');
     let isResizing = false;
     let startWidth, startHeight, startX, startY;
     let resizeDirection = null;
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         images.forEach(image => {
             originalWidth[image.src] = parseFloat(window.getComputedStyle(image).width);
             originalHeight[image.src] = parseFloat(window.getComputedStyle(image).height);
-            originalStyles[image.src] = image.getAttribute('style'); // Сохраняем исходные стили
+            originalStyles[image.src] = image.getAttribute('style');
         });
     }
     // Оригинальные размеры и стили картинок при загрузке страницы
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let deltaY = currentY - startY;
         let newWidth = startWidth;
         let newHeight = startHeight;
-        // Корректировка ширины и высоту в зависимости от направления
+        // Корректировка ширины и высоты в зависимости от направления
         switch (resizeDirection) {
             case 'top-left':
                 newWidth = startWidth - deltaX;

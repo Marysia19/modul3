@@ -2,14 +2,11 @@
 // перенос к выбору материала
 document.getElementById('scroll-to-next').addEventListener('click', function() {
   const targetClass = ['.choice-title']; 
-  // Отступ сверху в пикселях
   const offset = 30;
   targetClass.forEach(function(className) {
       const targetElement = document.querySelector(className);
       if (targetElement) {
-          // Получаем позицию элемента относительно документа
           const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-          // Вычисляем конечную позицию с учетом отступа
           const scrollToPosition = targetPosition - offset;
           window.scrollTo({
               top: scrollToPosition,
