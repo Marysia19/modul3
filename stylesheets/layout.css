@@ -45,8 +45,8 @@ body {
   color: #A3561F;
   user-select: none;
 }
-.container{
-  height: 100vh;
+.section_1{
+  min-height: 90vh;
 }
 .about{
   margin: 1vw 0vw 0vw 4vw;
@@ -59,6 +59,9 @@ body {
   top: 30vw;
   left: 50vw;
   transform: translate(-50%, -50%);
+}
+.tablet-image {
+  display: none;
 }
 .mobile-image {
   display: none;
@@ -145,9 +148,10 @@ body {
 .popup {
   display: none; 
 }
+
 /* Стили для секции 2 с выбором материала */
 .section_2{
-  margin-top: 20vw;
+  padding-top: 8vw;
 }
 .choice-title {
   display: flex;
@@ -290,7 +294,7 @@ body {
 .popuprules {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
@@ -314,7 +318,9 @@ body {
   justify-content: center;
 }
 .question-mark3{
+  width: 5vw;
   margin: 3vw 4vw 1vw 1vw;
+  cursor: pointer;
 }
 .popup3 {
   display: none; 
@@ -375,7 +381,7 @@ body {
   left: 0;
   transform: translate(1vw, 2vw);
   max-height: 15vw;
-  width: 17vw;
+  max-width: 17vw;
 }
 .save-layout {
   font-size: 2.5vw;

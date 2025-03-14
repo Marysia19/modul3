@@ -10,14 +10,20 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentImage = null;
     let originalWidth = {};
     let originalHeight = {};
-    // оригинальные размеры картинок при загрузке страницы
-    images.forEach(image => {
-        originalWidth[image.src] = parseFloat(window.getComputedStyle(image).width);
-        originalHeight[image.src] = parseFloat(window.getComputedStyle(image).height);
-    });
+    let originalStyles = {};
+    // Функция для обновления оригинальных размеров и стилей изображений
+    function updateOriginalSizesAndStyles() {
+        images.forEach(image => {
+            originalWidth[image.src] = parseFloat(window.getComputedStyle(image).width);
+            originalHeight[image.src] = parseFloat(window.getComputedStyle(image).height);
+            originalStyles[image.src] = image.getAttribute('style'); // Сохраняем исходные стили
+        });
+    }
+    // Оригинальные размеры и стили картинок при загрузке страницы
+    updateOriginalSizesAndStyles();
     // Функция для начала изменения размера
     function startResize(e) {
-        if (currentImage.style.width === '130%') return; // ограничитель расширения до 130% от оригинала
+        if (currentImage && currentImage.style.width === '130%') return; // ограничитель расширения до 130% от оригинала
         if (popupMenu.style.display === 'block') return; // если popup меню открыто, игнор события
         isResizing = true;
         // Получение начальных размеров и координат
@@ -87,41 +93,53 @@ document.addEventListener('DOMContentLoaded', function() {
                 newHeight = startHeight + deltaY;
                 break;
         }
-        // Ограничивание минимальный и максимальный размер
+        // ограничивание минимального и максимального размера
         let scaleX = newWidth / startWidth;
         let scaleY = newHeight / startHeight;
         let scale = Math.min(scaleX, scaleY);
-        if (scale > 1.3) scale = 1.3; // Максимальный размер130%
+        if (scale > 1.3) scale = 1.3; // Максимальный размер 130%
         if (scale < 1) scale = 1; // Минимальный размер 100%
         // новые размеры и прозрачность
         currentImage.style.width = (startWidth * scale) + 'px';
         currentImage.style.height = (startHeight * scale) + 'px';
         currentImage.style.opacity = 0.7 + 0.3 * (scale - 1) / 0.3;
-        // Если достигнут максимальный размер, показ попап
+        // Если достигнут максимальный размер, показ попапа
         if (scale === 1.3) {
             isResizing = false;
             isMaxSizeReached = true;
             popupMenu.style.display = 'block';
         }
     }
-    // если пользователь нажал крестик, сброс
-    function resetImage() {
+    // Функция для полного сброса изображения
+    function resetImageCompletely() {
         if (currentImage) {
-            currentImage.style.width = originalWidth[currentImage.src] + 'px';
-            currentImage.style.height = originalHeight[currentImage.src] + 'px';
-            currentImage.style.opacity = '0.7';
+            currentImage.setAttribute('style', originalStyles[currentImage.src] || '');
         }
         isMaxSizeReached = false;
+        isResizing = false;
+        currentImage = null;
+        resizeDirection = null;
         aboutElements.forEach(element => {
             element.style.display = '';
         });
     }
- // Если не дотянули до максимального размера, сброс
+    // Если не дотянули до максимального размера, сброс
     function stopResize() {
         if (isResizing && !isMaxSizeReached) {
-            resetImage();
+            resetImageCompletely();
         }
         isResizing = false;
+    }
+    // Функция для корректировки размеров изображения при изменении размеров окна
+    function handleWindowResize() {
+        if (currentImage && popupMenu.style.display === 'block') {
+            resetImageCompletely();
+            popupMenu.style.display = 'none';
+        } else if (currentImage) {
+            updateOriginalSizesAndStyles();
+            currentImage.style.width = originalWidth[currentImage.src] + 'px';
+            currentImage.style.height = originalHeight[currentImage.src] + 'px';
+        }
     }
     // Обработчики для всех изображений
     images.forEach(image => {
@@ -134,14 +152,17 @@ document.addEventListener('DOMContentLoaded', function() {
             startResize(e);
         }, { passive: false });
     });
-    //обработчики для мыши и сенсорных устройств
+    // Обработчики для мыши и сенсорных устройств
     window.addEventListener('mousemove', resize);
     window.addEventListener('mouseup', stopResize);
     window.addEventListener('touchmove', resize, { passive: false });
     window.addEventListener('touchend', stopResize);
-    //обработчик для кнопки закрытть
+
+    // Обработчик для кнопки закрыть
     closeButton.addEventListener('click', function() {
-        popupMenu.style.display = 'none'
-        resetImage();
+        popupMenu.style.display = 'none';
+        resetImageCompletely(); // Полный сброс изображения и состояния
     });
+    // Обработчик изменения размера окна
+    window.addEventListener('resize', handleWindowResize);
 });

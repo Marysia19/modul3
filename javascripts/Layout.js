@@ -17,37 +17,67 @@ document.addEventListener('DOMContentLoaded', () => {
     // Применяем новые значения translate через CSS
     img.style.transform = `translate(${x}px, ${y}px)`;
   };
-  // Находим все изображения внутри класса layout и добавляем обработчики событий
-  document.querySelectorAll('.layout img').forEach(img => {
-    img.addEventListener('mousedown', (e) => {
-      // запоминаем выбранное изображение
-      selectedImage = img;
-      // получаем текущие значения transform
-      const { x, y } = getTransform(selectedImage);
-      // ыычисляем начальные координаты мыши относительно изображения
-      startX = e.clientX - x;
-      startY = e.clientY - y;
-      img.style.cursor = 'grabbing';
-    });
-  });
-  // обработчик события движения мыши
-  document.addEventListener('mousemove', (e) => {
+  // функция для обработки начала перемещения (мышь или касание)
+  const handleStart = (clientX, clientY, img) => {
+    // запоминаем выбранное изображение
+    selectedImage = img;
+    // получаем текущие значения transform
+    const { x, y } = getTransform(selectedImage);
+    // вычисляем начальные координаты мыши относительно изображения
+    startX = clientX - x;
+    startY = clientY - y;
+    // меняем курсор на "grabbing"
+    img.style.cursor = 'grabbing';
+  };
+  //для обработки перемещения
+  const handleMove = (clientX, clientY) => {
     // если изображение выбрано, то вычисляем новые координаты для стиля transform
     if (selectedImage) {
-      const x = e.clientX - startX;
-      const y = e.clientY - startY;
+      const x = clientX - startX;
+      const y = clientY - startY;
       setTransform(selectedImage, x, y);
     }
-  });
-  // обработчик события отпускания кнопки мыши
-  document.addEventListener('mouseup', () => {
+  };
+  //завершение перемещения
+  const handleEnd = () => {
     if (selectedImage) {
       selectedImage.style.cursor = 'grab';
       selectedImage = null;
     }
+  };
+  // Находим все изображения внутри класса layout и добавляем обработчики событий
+  document.querySelectorAll('.layout img').forEach(img => {
+    // обработчик события нажатия кнопки мыши
+    img.addEventListener('mousedown', (e) => {
+      handleStart(e.clientX, e.clientY, img);
+    });
+    // обработчик события касания на сенсорных устройствах
+    img.addEventListener('touchstart', (e) => {
+      const touch = e.touches[0];
+      handleStart(touch.clientX, touch.clientY, img);
+      e.preventDefault();
+    });
+  });
+  // обработчик события движения мыши
+  document.addEventListener('mousemove', (e) => {
+    handleMove(e.clientX, e.clientY);
+  });
+  // обработчик события перемещения на сенсорных устройствах
+  document.addEventListener('touchmove', (e) => {
+    const touch = e.touches[0];
+    handleMove(touch.clientX, touch.clientY);
+    e.preventDefault();
+  });
+  // обработчик события отпускания кнопки мыши
+  document.addEventListener('mouseup', () => {
+    handleEnd();
+  });
+  // обработчик события завершения касания на сенсорных устройствах
+  document.addEventListener('touchend', () => {
+    handleEnd();
   });
 });
-// замена планировки при двойном клике
+// изображения для замены планировки при двойном клике
 const layoutVersions = {
   'image-1': ['images/layout_1.svg', 'images/layout_1_2.svg', 'images/layout_1_3.svg'],
   'image-2': ['images/layout_2.svg', 'images/layout_2_1.svg', 'images/layout_2_2.svg'],
@@ -62,11 +92,33 @@ images.forEach((image) => {
   const imageClass = image.classList[1];
   // индекс текущей версии изображения
   let currentVersionIndex = 0;
-  // Обработчик двойного клика
-  image.addEventListener('dblclick', () => {
-    // Увеличиваем индекс текущей версии
+  // переменная для хранения времени последнего клика
+  let lastClickTime = 0;
+
+  // функция для обработки двойного клика или касания
+  const handleDoubleClick = () => {
+    // увеличение индекса изображения
     currentVersionIndex = (currentVersionIndex + 1) % layoutVersions[imageClass].length;
     // меняем src изображения на следующее
     image.src = layoutVersions[imageClass][currentVersionIndex];
+  };
+  // обработчик клика для мыши
+  image.addEventListener('click', () => {
+    const currentTime = new Date().getTime();
+    // Если время между кликами меньше 300 мс, считается за двойной клик
+    if (currentTime - lastClickTime < 300) {
+      handleDoubleClick();
+    }
+    // Обновление времени последнего клика
+    lastClickTime = currentTime;
+  });
+  // обработчик касания для сенсорных устройств
+  image.addEventListener('touchstart', (e) => {
+    const currentTime = new Date().getTime();
+    if (currentTime - lastClickTime < 300) {
+      handleDoubleClick();
+      e.preventDefault();
+    }
+    lastClickTime = currentTime;
   });
 });
