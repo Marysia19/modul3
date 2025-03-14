@@ -126,10 +126,6 @@ body {
   text-decoration: none;
   color: #000;
 }
-.description {
-  margin-top: 1vw; 
-  font-size: 1.3vw;
-}
 .about__right{
   margin-top: 23vw;
   margin-right: 4vw;
@@ -141,12 +137,21 @@ body {
   font-size: 3.5vw;
 }
 .question-mark{
-  width: 9vw;
+  width: 4vw;
   cursor: pointer;
-  display: none;
 }
 .popup {
-  display: none; 
+  position: fixed;
+  margin-top: 2vw;
+  transform: translate(7%, -210%);
+  background-color: white;
+  border: 0.3vw solid black;
+  padding: 1vw;
+  z-index: 10;
+  width: 35vw;
+  font-size: 1.5vw;
+  text-align: center;
+  display: none;
 }
 
 /* Стили для секции 2 с выбором материала */

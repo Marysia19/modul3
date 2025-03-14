@@ -53,9 +53,9 @@
         position: fixed;
         left: 30vw;
         margin-top: 2vw;
-        transform: translate(-46%, -220%);
+        transform: translate(-46%, -186%);
         background-color: white;
-        border: 0.4vw solid black;
+        border: 0.5vw solid black;
         padding: 2vw;
         z-index: 10;
         width: 65vw;
@@ -63,8 +63,7 @@
         text-align: center;
       }
       .popup p{
-        margin-top: 1vw;
-        font-size: 3vw;
+        font-size: 3.4vw;
       }
       .content {
         padding: 4vw;
@@ -100,11 +99,9 @@
       .about__right h2{
         font-size: 4.5vw;
       }
-      .description{
-        display: none;
-      }
       .question-mark{
       display: block;
+      width: 8vw;
       }
       .section_1{
         min-height: 90vw;
@@ -147,10 +144,10 @@
       }
       .popup2 {
         transform: translate(20%, -90%);
-        border: 0.4vw solid black;
+        border: 0.5vw solid black;
         padding: 2vw;
         width: 65vw;
-        font-size: 3vw;
+        font-size: 3.4vw;
       }
       .grid-container {
         grid-template-columns: repeat(8, 11vw);
@@ -204,10 +201,10 @@
         background-color: white;
         z-index: 10;
         text-align: center;
-        border: 0.4vw solid black;
+        border: 0.5vw solid black;
         padding: 2vw;
         width: 65vw;
-        font-size: 3vw
+        font-size: 3.4vw
       }
       .layout-bg{
         background-position: 30% 20%;
@@ -314,10 +311,6 @@
     }
     .question-mark{
     display: block;
-    max-width: 4vw;
-    }
-    .description{
-      display: none;
     }
     .popuprules {
       top: 55%;
@@ -325,13 +318,13 @@
     .popup {
       position: fixed;
       margin-top: 2vw;
-      transform: translate(4%, -220%);
+      transform: translate(5%, -190%);
       background-color: white;
       border: 0.3vw solid black;
-      padding: 2vw;
+      padding: 1.5vw;
       z-index: 10;
       width: 35vw;
-      font-size: 2vw;
+      font-size: 1.5vw;
       text-align: center;
     }
     .layout-container__1 img, .layout-container__2 img{
